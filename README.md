@@ -90,6 +90,8 @@ En `gasto.service.js` tendrás que programar las siguientes funciones:
 
 > [!CAUTION]
 > 
-> En la interfaz gráfica, **NO es necesario actualizar** los campos correspondiente a los precios anuales cuando se recibe un nuevo gasto.
+> La interfaz es de tipo *dummy* simplemente para que comprobéis que los elementos y los estilos se cargan correctamente.
 > 
-> La interfaz es de tipo *dummy* simplemente para que comprobéis que todo se visualiza y los estilos se cargan correctamente. 
+> **NO es necesario actualizar** los campos correspondiente a los precios anuales cuando se recibe un nuevo gasto.
+> 
+> Actualízalo en el `sessionStorage` únicamente 
