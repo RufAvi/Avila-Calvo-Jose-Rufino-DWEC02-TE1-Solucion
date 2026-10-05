@@ -87,5 +87,9 @@ En `gasto.service.js` tendrás que programar las siguientes funciones:
   - El programa empezará a generar un gasto con datos aleatorios cada 5 segundos —*gasto actual*— y llamará a la función `procesarGasto()`, pasándole el gasto actual en formato JSON como parámetro.
   
   - Para cada gasto actual, crea un objeto `GastoCombustible` y, en función del año en el que se realizó ese gasto, recupera del `sessionStorage` el gasto total de ese año, súmale el importe del gasto actual y actualiza el valor almacenado en `sessionStorage`.
-  
-  - En la interfaz gráfica, actualiza el campo correspondiente con los precios acumulador de los gastos para cada año.
+
+> [!CAUTION]
+> 
+> En la interfaz gráfica, **NO es necesario actualizar** los campos correspondiente a los precios anuales cuando se recibe un nuevo gasto.
+> 
+> La interfaz es de tipo *dummy* simplemente para que comprobéis que todo se visualiza y los estilos se cargan correctamente. 
