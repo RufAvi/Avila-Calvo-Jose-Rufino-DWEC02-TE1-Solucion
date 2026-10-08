@@ -1,11 +1,11 @@
-console.log("Fichero main.js cargado correctamente");
+import { GASTOS_DB } from './data/gasto.data.js';
+import { GastoService } from './service/gasto.service.js';
 
+//console.log("Fichero main.js cargado correctamente");
 
+console.log("Mis datos ", GASTOS_DB);
 
-
-
-
-
+GastoService.almacenarGastos();
 
 
 
