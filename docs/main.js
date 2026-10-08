@@ -9,9 +9,6 @@ import { GastoService } from './service/gasto.service.js';
 // let gastoDePrueba = '{"id":99,"vehicleType":"moto","date":"2020-01-01T00:00:00.000Z","kilometers":50,"precioViaje":100}';
 // GastoService.procesarGasto(gastoDePrueba);
 
-
-
-
 // ----------------------------------------------- (! NO TOCAR ) ------------------------------------------------------
 let ultimoId = 18; // Último ID de tu lista inicial
 let segundos = 5;
@@ -47,7 +44,7 @@ setInterval(() => {
 
     // mostramos el gasto
     console.log("Nuevo gasto generado:", gasto);
-        alert(`Nuevo gasto generado:\n${JSON.stringify(gasto, null, 2)}`);
+    //alert(`Nuevo gasto generado:\n${JSON.stringify(gasto, null, 2)}`);
 
 
     GastoService.procesarGasto(JSON.stringify(gasto));

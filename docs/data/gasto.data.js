@@ -26,16 +26,18 @@ const jsonHistorico = `[
   {"id":18,"vehicleType":"moto","date":"2020-12-04T00:00:00.000Z","kilometers":34,"precioViaje":2.04}
 ]`;
 
-
+// Convertimos el JSON en un array de objetos GastoCombustible
 const datosBasicos = JSON.parse(jsonHistorico);
 const arrayFinal = [];
+// Creamos instancias de GastoCombustible y las añadimos al array final
 for (let i = 0 ; i < datosBasicos.length; i++) {
     let item = datosBasicos[i];
+    // Creamos un nuevo objeto GastoCombustible a partir de los datos del JSON
     let nuevoObjeto = new GastoCombustible(item.id, item.vehicleType, item.date, item.kilometers, item.precioViaje);
     arrayFinal.push(nuevoObjeto);
 }   
 
-
+// Exportamos el array final para que pueda ser utilizado en otros módulos
 export const GASTOS_DB = arrayFinal;
 
 
