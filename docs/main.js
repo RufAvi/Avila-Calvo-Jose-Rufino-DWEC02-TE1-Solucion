@@ -1,11 +1,10 @@
-import { GASTOS_DB } from './data/gasto.data.js';
 import { GastoService } from './service/gasto.service.js';
 
 //console.log("Fichero main.js cargado correctamente");
 
 // console.log("Mis datos ", GASTOS_DB);
 
-// GastoService.almacenarGastos();
+GastoService.almacenarGastos();
 // let gastoDePrueba = '{"id":99,"vehicleType":"moto","date":"2020-01-01T00:00:00.000Z","kilometers":50,"precioViaje":100}';
 // GastoService.procesarGasto(gastoDePrueba);
 
