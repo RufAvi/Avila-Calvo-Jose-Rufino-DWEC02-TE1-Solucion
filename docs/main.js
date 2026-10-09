@@ -44,7 +44,7 @@ setInterval(() => {
 
     // mostramos el gasto
     console.log("Nuevo gasto generado:", gasto);
-    //alert(`Nuevo gasto generado:\n${JSON.stringify(gasto, null, 2)}`);
+    alert(`Nuevo gasto generado:\n${JSON.stringify(gasto, null, 2)}`);
 
 
     GastoService.procesarGasto(JSON.stringify(gasto));

@@ -14,7 +14,10 @@ var gastoAnual = {
 function almacenarGastos(){
   GASTOS_DB.forEach(gasto => {
     localStorage.setItem(gasto.id.toString(), JSON.stringify(gasto));
-    let anio = gasto.date.getFullYear();
+
+    // Obtenemos el año del gasto y actualizamos el gasto anual
+    let fechaObjeto = new Date(gasto.date);
+    let anio = fechaObjeto.getFullYear();
 
     if(gastoAnual[anio] !== undefined){
       gastoAnual[anio] += gasto.precioViaje;
@@ -31,8 +34,9 @@ function procesarGasto(jsonNuevoGasto){
   let dato = JSON.parse(jsonNuevoGasto);
 
   // Creamos un nuevo objeto GastoCombustible a partir de los datos del JSON
-  let nuevoGasto = new GastoCombustible(dato.id, dato.vehicleType, dato.date, dato.kilometers, dato.precioViaje);
+  let nuevoGasto = new GastoCombustible(dato.id, dato.vehicleType,  new Date(dato.date), dato.kilometers, dato.precioViaje);
   let anio = nuevoGasto.date.getFullYear();
+
   // Actualizamos el gasto anual en sessionStorage
   let gastoAnterior = parseFloat(sessionStorage.getItem(anio.toString())) || 0;
   let gastoActualizado = gastoAnterior + nuevoGasto.precioViaje;
